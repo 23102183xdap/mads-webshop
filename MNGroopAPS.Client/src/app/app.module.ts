@@ -12,6 +12,9 @@ import { KategoriComponent } from './kategori/kategori.component';
 import { KvugComponent } from './kvug/kvug.component';
 import { KategoriDeatailsComponent } from './kategori-deatails/kategori-deatails.component';
 import { AdminKategoriComponent } from './admin-kategori/admin-kategori.component';
+import { LakridsBolcherComponent } from './lakrids-bolcher/lakrids-bolcher.component';
+import { BlandetBolcherComponent } from './blandet-bolcher/blandet-bolcher.component';
+import { SureBolcherComponent } from './sure-bolcher/sure-bolcher.component';
 
 
 
@@ -24,7 +27,10 @@ import { AdminKategoriComponent } from './admin-kategori/admin-kategori.componen
     KategoriComponent,
     KvugComponent,
     KategoriDeatailsComponent,
-    AdminKategoriComponent
+    AdminKategoriComponent,
+    LakridsBolcherComponent,
+    BlandetBolcherComponent,
+    SureBolcherComponent
   ],
   imports: [
     BrowserModule,
