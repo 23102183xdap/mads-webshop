@@ -15,6 +15,9 @@ import { AdminKategoriComponent } from './admin-kategori/admin-kategori.componen
 import { LakridsBolcherComponent } from './lakrids-bolcher/lakrids-bolcher.component';
 import { BlandetBolcherComponent } from './blandet-bolcher/blandet-bolcher.component';
 import { SureBolcherComponent } from './sure-bolcher/sure-bolcher.component';
+import { VingummierComponent } from './vingummier/vingummier.component';
+import { ChokoladeComponent } from './chokolade/chokolade.component';
+import { HChokoladeComponent } from './h-chokolade/h-chokolade.component';
 
 
 
@@ -30,7 +33,10 @@ import { SureBolcherComponent } from './sure-bolcher/sure-bolcher.component';
     AdminKategoriComponent,
     LakridsBolcherComponent,
     BlandetBolcherComponent,
-    SureBolcherComponent
+    SureBolcherComponent,
+    VingummierComponent,
+    ChokoladeComponent,
+    HChokoladeComponent
   ],
   imports: [
     BrowserModule,

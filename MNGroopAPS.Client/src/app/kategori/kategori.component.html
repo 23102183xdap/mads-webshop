@@ -1,21 +1,18 @@
 <!-- den her er vingumme og ikke kategori -->
-<div class="title">
-  Title:
-  <input id="Title" [(ngModel)]="kategori.title">
-</div>
+<h1>Kategorier</h1>
 
-<div class="title">
-  beskrivelse 
-  <input id="beskrivelse" [(ngModel)]="kategori.beskrivelse">
-</div>
-<button (click)="save()">gem slik</button>
+<p>Bolcher</p>
+<a routerLink="/bolcher" routerLinkActive="active">
+  <img src="/assets/img/blandet_bolcher.jpg" alt="Bolcher">
+ </a>
 
+ <p>Vingummier</p>
 
-<div  *ngIf="kategorier.length > 0" >
-  <ul *ngFor="let kategori of kategorier">
-      <a (click)="edit(kategori)">{{kategori.title}}</a>
-      <a (click)="delete(kategori)"> slet</a>
-  </ul>
+ <a routerLink="/vingummier" routerLinkActive="active">
+ <img src="/assets/img/vingummier.jpg" alt="vingummier">
+ </a>
 
-
-</div> 
+ <p>Chokolade</p>
+ <a routerLink="/chokolade" routerLinkActive="active">
+  <img src="/assets/img/chokolade.jpg" alt="chokolade">
+  </a>

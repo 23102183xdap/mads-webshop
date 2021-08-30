@@ -6,6 +6,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { BolcherComponent } from './bolcher/bolcher.component';
 import { KategoriComponent } from './kategori/kategori.component';
 import { LakridsBolcherComponent } from './lakrids-bolcher/lakrids-bolcher.component';
+import { SureBolcherComponent } from './sure-bolcher/sure-bolcher.component';
+import { BlandetBolcherComponent } from './blandet-bolcher/blandet-bolcher.component';
+import { VingummierComponent } from './vingummier/vingummier.component';
+import { ChokoladeComponent } from './chokolade/chokolade.component';
+import { HChokoladeComponent } from './h-chokolade/h-chokolade.component';
 
 const routes: Routes = [
 
@@ -25,9 +30,15 @@ const routes: Routes = [
   
   {path: 'lakrids-bolcher', component:LakridsBolcherComponent},
 
-  {path: 'sure-bolcher', component:LakridsBolcherComponent},
+  {path: 'sure-bolcher', component:SureBolcherComponent},
 
-  {path: 'blandet-bolcher', component:LakridsBolcherComponent}
+  {path: 'blandet-bolcher', component:BlandetBolcherComponent},
+
+  {path: 'vingummier', component:VingummierComponent},
+
+  {path: 'chokolade', component:ChokoladeComponent},
+
+  {path: 'h-chokolade', component:HChokoladeComponent}
   
 
 ];
