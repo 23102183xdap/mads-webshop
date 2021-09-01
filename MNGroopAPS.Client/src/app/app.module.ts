@@ -18,6 +18,8 @@ import { SureBolcherComponent } from './sure-bolcher/sure-bolcher.component';
 import { VingummierComponent } from './vingummier/vingummier.component';
 import { ChokoladeComponent } from './chokolade/chokolade.component';
 import { HChokoladeComponent } from './h-chokolade/h-chokolade.component';
+import { MChokoladeComponent } from './m-chokolade/m-chokolade.component';
+import { SVingummierComponent } from './s-vingummier/s-vingummier.component';
 
 
 
@@ -36,7 +38,9 @@ import { HChokoladeComponent } from './h-chokolade/h-chokolade.component';
     SureBolcherComponent,
     VingummierComponent,
     ChokoladeComponent,
-    HChokoladeComponent
+    HChokoladeComponent,
+    MChokoladeComponent,
+    SVingummierComponent
   ],
   imports: [
     BrowserModule,

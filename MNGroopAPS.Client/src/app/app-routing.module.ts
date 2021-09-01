@@ -11,6 +11,8 @@ import { BlandetBolcherComponent } from './blandet-bolcher/blandet-bolcher.compo
 import { VingummierComponent } from './vingummier/vingummier.component';
 import { ChokoladeComponent } from './chokolade/chokolade.component';
 import { HChokoladeComponent } from './h-chokolade/h-chokolade.component';
+import { MChokoladeComponent } from './m-chokolade/m-chokolade.component';
+import { SVingummierComponent } from './s-vingummier/s-vingummier.component';
 
 const routes: Routes = [
 
@@ -38,7 +40,11 @@ const routes: Routes = [
 
   {path: 'chokolade', component:ChokoladeComponent},
 
-  {path: 'h-chokolade', component:HChokoladeComponent}
+  {path: 'h-chokolade', component:HChokoladeComponent},
+
+  {path: 'm-chokolade', component:MChokoladeComponent},
+
+  {path: 's-vingummier', component:SVingummierComponent}
   
 
 ];
