@@ -20,6 +20,7 @@ import { ChokoladeComponent } from './chokolade/chokolade.component';
 import { HChokoladeComponent } from './h-chokolade/h-chokolade.component';
 import { MChokoladeComponent } from './m-chokolade/m-chokolade.component';
 import { SVingummierComponent } from './s-vingummier/s-vingummier.component';
+import { CrudComponent } from './crud/crud.component';
 
 
 
@@ -40,7 +41,8 @@ import { SVingummierComponent } from './s-vingummier/s-vingummier.component';
     ChokoladeComponent,
     HChokoladeComponent,
     MChokoladeComponent,
-    SVingummierComponent
+    SVingummierComponent,
+    CrudComponent
   ],
   imports: [
     BrowserModule,
