@@ -10,6 +10,7 @@ export class LakridsBolcherComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
 }

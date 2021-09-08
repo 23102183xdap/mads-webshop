@@ -1,3 +1,8 @@
+import { Component, OnInit } from '@angular/core';
+import { CartItem } from '../model';
+import { Product } from '../model';
+import { BasketService } from '../service/basket.service';
+
 @Component({
   selector: 'app-checkout',
   templateUrl: './checkout.component.html',
@@ -11,7 +16,7 @@ export class CheckoutComponent implements OnInit {
   constructor(
     private basketService: BasketService
   ) { }
-
+  
   ngOnInit(): void {
     this.basketService.getBasket().subscribe(CartItems => this.CartItems = CartItems)
     console.log("Checkout", this.CartItems);
