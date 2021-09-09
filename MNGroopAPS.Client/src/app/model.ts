@@ -34,6 +34,8 @@ export interface CartItem {
     pris: number,
     antal: number,
     storage: number,
+    id: number,
+    orderId: number
 }
 export interface Order {
     date : Date,

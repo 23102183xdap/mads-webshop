@@ -2,7 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { asNativeElements, Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { ObserveOnSubscriber } from 'rxjs/internal/operators/observeOn';
-import { Category, Product } from '../model';
+import { Category, Order, Product } from '../model';
 import { catchError, tap } from 'rxjs/operators';
 import { CartItem } from '../model';
 import { isNgTemplate } from '@angular/compiler';
@@ -22,6 +22,8 @@ export class BasketService {
     private http: HttpClient
   ) { }
   ngOnInit(): void {
+    localStorage.setItem('string', '123');
+      console.log(localStorage.getItem('string'));
     // Den læser det som det første
   }
 
@@ -29,13 +31,15 @@ export class BasketService {
     let cart = localStorage.getItem('cart') 
     if (cart == null || cart == 'null') {
       this.Cart = [];
-      console.log("LOCALSTORAGE NULL", JSON.parse(localStorage.getItem('cart')));
+      //console.log("LOCALSTORAGE NULL", JSON.parse(localStorage.getItem('cart')));
       localStorage.setItem('cart', JSON.stringify(this.Cart));
       console.log('Pushed first Item: ', this.Cart);
     }
-    else {
-      this.Cart = JSON.parse(localStorage.getItem('cart'));
-      console.log("LOCAL STORAGE HAS ITEMS", JSON.parse(localStorage.getItem('cart')));
+    if (cart!= null) {
+      
+
+      this.Cart = JSON.parse(cart);
+     // console.log("LOCAL STORAGE HAS ITEMS", JSON.parse(localStorage.getItem('cart')));
       localStorage.setItem('cart', JSON.stringify(this.Cart));
     }
   }
@@ -89,22 +93,25 @@ export class BasketService {
     this.SaveBasket();
   }
   buyeverthing(): Observable<CartItem[]> {
-    let order = {
-      "userId": 1,
-      "date": "2021-06-22T11:44:22.869Z",
-      orderDetails: []
+    let order: Order = {
+      id: 1,
+      date: new Date ("2021-08-09T11:44:22.869Z"),
+      orderDetails:  []
+      
     } 
     this.createbasket();
     this.Cart.forEach(function(item){
       order.orderDetails.push({
-        "productsId": item.productid,
-        "price": item.pris,
-        "amount": item.antal
+        productsId: item.productid,
+        price: item.pris,
+        amount: item.antal,
+         id: item.id,
+         orderId: item.orderId,
       })
     });
     console.log("buyeverything");
-    return this.http.post<CartItem[]>(${this.apiUrl}order, order, this.httpOptions).pipe(
-      tap(_ => {localStorage.setItem('cart',null)}),
+    return this.http.post<CartItem[]>(`${this.apiUrl}Order`, order, this.httpOptions).pipe(
+      tap(_ => localStorage.setItem('cart', 'null')),
       catchError(this.handleError<CartItem[]>("addOrder"))
     );
   }

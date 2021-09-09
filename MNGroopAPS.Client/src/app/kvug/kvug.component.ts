@@ -1,14 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { CartItem } from '../model';
-import { Product } from '../model';
+import { CartItem, Product } from '../model';
 import { BasketService } from '../service/basket.service';
 
 @Component({
-  selector: 'app-checkout',
-  templateUrl: './checkout.component.html',
-  styleUrls: ['./checkout.component.css']
+  selector: 'app-kvug',
+  templateUrl: './kvug.component.html',
+  styleUrls: ['./kvug.component.css']
 })
-export class CheckoutComponent implements OnInit {
+export class KvugComponent implements OnInit {
 
   products: Product[] = [];
   CartItems: CartItem[] = [];
@@ -43,5 +42,4 @@ export class CheckoutComponent implements OnInit {
     }
 
   }
-  
 }
